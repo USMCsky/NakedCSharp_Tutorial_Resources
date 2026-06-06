@@ -9,16 +9,17 @@ namespace Classes
         static void Main(string[] args)
         {
             // Create an instance of the Person class - this is called creating an object
-            Person myPerson = new Person();
-            myPerson.name = "John Doe";
+            Person myPerson = new Person("Nancy", 120);
+            Person myOtherPerson = new Person("Richard");
 
-            // Call the Eat method on the myPerson object
-            myPerson.Eat(7);
+            // Call the Eat method on the myPerson object and the myOtherPerson object
+            myPerson.Eat(10);
+            myOtherPerson.Eat(20);
 
-            Console.WriteLine(myPerson.name); 
-            Console.WriteLine(myPerson.weight);
-            // Call the FirstInitial method and print the result
-            Console.WriteLine(myPerson.FirstInitial());
+
+            Console.WriteLine("The species of both people is: " + Person.species + " " + Person.personCount);
+            Console.WriteLine(myPerson.name +" " + myPerson.weight + " " +myPerson.FirstInitial());
+            Console.WriteLine(myOtherPerson.name + " " + myOtherPerson.weight + " " + myOtherPerson.FirstInitial());
         }
 
     }

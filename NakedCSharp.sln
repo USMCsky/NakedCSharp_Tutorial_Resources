@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Switch_statment", "Switch_s
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrivateGetSet", "PrivateGetSet\PrivateGetSet.csproj", "{843DC4D6-DD9F-443B-8382-C2AC61940297}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandomGuessGame", "RandomGuessGame\RandomGuessGame.csproj", "{46E49544-0CD3-4A13-8654-0E9F7240442B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{843DC4D6-DD9F-443B-8382-C2AC61940297}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{843DC4D6-DD9F-443B-8382-C2AC61940297}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{843DC4D6-DD9F-443B-8382-C2AC61940297}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46E49544-0CD3-4A13-8654-0E9F7240442B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46E49544-0CD3-4A13-8654-0E9F7240442B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46E49544-0CD3-4A13-8654-0E9F7240442B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46E49544-0CD3-4A13-8654-0E9F7240442B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

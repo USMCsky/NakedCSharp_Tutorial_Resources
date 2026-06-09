@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrivateGetSet", "PrivateGet
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandomGuessGame", "RandomGuessGame\RandomGuessGame.csproj", "{46E49544-0CD3-4A13-8654-0E9F7240442B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuizApp", "QuizApp\QuizApp\QuizApp.csproj", "{06DE8B96-F20A-A467-6D7B-B6FF54201146}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{46E49544-0CD3-4A13-8654-0E9F7240442B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{46E49544-0CD3-4A13-8654-0E9F7240442B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{46E49544-0CD3-4A13-8654-0E9F7240442B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06DE8B96-F20A-A467-6D7B-B6FF54201146}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06DE8B96-F20A-A467-6D7B-B6FF54201146}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06DE8B96-F20A-A467-6D7B-B6FF54201146}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06DE8B96-F20A-A467-6D7B-B6FF54201146}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

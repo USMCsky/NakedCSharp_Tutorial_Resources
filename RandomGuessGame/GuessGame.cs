@@ -1,55 +1,58 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using static System.Math;
 
 public class GuessGame
 {
     static void Main(string[] args)
     {
-        Random rand = new Random();
-        bool playAgain = true;
+        var rand = new Random();
 
-        while (playAgain)
+        do
         {
-            int number = rand.Next(1, 101);
-            int guess = 0;
-
-            Console.Clear();
-
-            Console.WriteLine("What number am I thinking of?");
-
-            while (!int.TryParse(Console.ReadLine(), out guess))
-            {
-                Console.WriteLine("Please enter a valid number:");
-            }
-
-            while (guess != number)
-            {
-                Console.WriteLine("Sorry! Let's try that again");
-                if (guess < number)
-                {
-                    Console.WriteLine("TOO LOW - Try again.");
-                }
-                else
-                {
-                    Console.WriteLine("TOO HIGH - Try again.");
-                }
-
-                while (!int.TryParse(Console.ReadLine(), out guess))
-                {
-                    Console.WriteLine("Please enter a valid number:");
-                }
-            }
-
-            Console.WriteLine("CONGRATULATIONS  " + number + " is the magic number!");
-
-            Console.Write("Play again? (Y/N): ");
-            var response = Console.ReadLine();
-            if (string.IsNullOrEmpty(response) || !response.Trim().StartsWith("y", StringComparison.OrdinalIgnoreCase))
-            {
-                playAgain = false;
-            }
+            PlayOneRound(rand);
         }
+        while (AskToPlayAgain());
+    }
+
+    static void PlayOneRound(Random rand)
+    {
+        int secret = rand.Next(1, 101);
+        int attempts = 0;
+
+        Console.Clear();
+        Console.WriteLine("I'm thinking of a number between 1 and 100.");
+
+        while (true)
+        {
+            int guess = ReadIntFromConsole("Your guess: ");
+            attempts++;
+
+            if (guess == secret)
+            {
+                Console.WriteLine($"CONGRATULATIONS — {secret} is correct! You guessed it in {attempts} attempt{(attempts == 1 ? "" : "s") }.");
+                break;
+            }
+
+            Console.WriteLine(guess < secret ? "TOO LOW - try again." : "TOO HIGH - try again.");
+        }
+    }
+
+    static int ReadIntFromConsole(string prompt)
+    {
+        while (true)
+        {
+            Console.Write(prompt);
+            var input = Console.ReadLine();
+            if (int.TryParse(input, out var value))
+                return value;
+
+            Console.WriteLine("Please enter a valid number.");
+        }
+    }
+
+    static bool AskToPlayAgain()
+    {
+        Console.Write("Play again? (Y/N): ");
+        var response = Console.ReadLine();
+        return !string.IsNullOrEmpty(response) && response.Trim().StartsWith("y", StringComparison.OrdinalIgnoreCase);
     }
 }
